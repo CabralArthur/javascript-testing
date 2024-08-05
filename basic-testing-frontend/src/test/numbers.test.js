@@ -23,9 +23,12 @@ it('Should transform a string with a decimal point to a number', () => {
 });
 
 it('Should return NaN if a non-numeric string is provided', () => {
+    const value2 = {};
     const value = 'invalid';
 
     const result = transformToNumber(value);
+    const result2 = transformToNumber(value2);
 
     expect(result).toBeNaN();
+    expect(result2).toBeNaN();
 });
