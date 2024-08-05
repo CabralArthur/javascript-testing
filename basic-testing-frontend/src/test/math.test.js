@@ -35,3 +35,15 @@ it('Should return NaN if some invalid number is included', () => {
     // 3rd A - Assert
     expect(result).toBeNaN();
 });
+
+it('Should return a correct sum if an array of numeric strings is provided', () => {
+    // 1st A - Arrange
+    const numbers = ['1', '2', '3'];
+    const expectedResult = numbers.reduce((previousValue, currentValue) => previousValue + Number(currentValue), 0);
+
+    // 2nd A - Act
+    const result = add(numbers);
+
+    // 3rd A - Assert
+    expect(result).toBe(expectedResult);
+});
